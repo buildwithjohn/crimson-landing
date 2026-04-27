@@ -179,10 +179,10 @@ export default function CrimsonWingsWebsite() {
       image: '/team/clement-iwuchukwu.jpg'
     },
     {
-      name: 'Prof. Titi A. Adeyemo',
+      name: 'Prof. Alani S. Akanmu',
       title: 'CMO',
-      bio: 'Distinguished Hematologist with 15+ years\' clinical and research leadership. Expert in hemoglobinopathies, hemophilia, and translational research advancing sickle cell and bleeding disorder care systems.',
-      image: '/team/titi-adeyemo.jpg'
+      bio: 'Professor of Hematology with 30+ years\' clinical, academic, and global research leadership in transfusion medicine, HIV care, and hematologic disorders; leading programs, policy, and over 200 peer-reviewed publications.',
+      image: '/team/alani-akanmu.jpg'
     }
   ];
 
