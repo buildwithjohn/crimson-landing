@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --crimson: 217 4 41;
+    --ocean: 0 119 182;
+    --pearl: 250 250 252;
+    --gold: 245 158 11;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    @apply bg-pearl font-body text-slate-800;
+  }
+
+  ::selection {
+    background: rgba(217, 4, 41, 0.18);
+    color: #d90429;
+  }
+
+  * {
+    @apply scroll-smooth;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-crimson hover:bg-red-700 text-white font-semibold rounded-xl px-6 py-3 transition-all duration-200 shadow-md;
+  }
+
+  .section-tag {
+    @apply inline-block text-xs font-bold tracking-widest uppercase text-crimson bg-crimson/8 px-4 py-1.5 rounded-full;
+  }
+
+  .section-tag-dark {
+    @apply inline-block text-xs font-bold tracking-widest uppercase text-red-300 bg-red-500/15 px-4 py-1.5 rounded-full border border-red-500/20;
+  }
+
+  .section-title {
+    @apply font-display text-4xl md:text-5xl font-bold text-slate-900 leading-tight;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-crimson to-amber-500 bg-clip-text text-transparent;
+  }
+
+  .shadow-glass {
+    box-shadow: 0 8px 32px rgba(0,0,0,0.06), inset 0 1px 0 rgba(255,255,255,0.8);
+  }
+
+  .shadow-nav {
+    box-shadow: 0 1px 30px rgba(0,0,0,0.08);
+  }
+
+  .shadow-card {
+    box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+
+  .font-body {
+    font-family: 'DM Sans', system-ui, sans-serif;
+  }
+
+  .bg-pearl {
+    background-color: rgb(250 250 252);
+  }
+
+  .bg-crimson {
+    background-color: rgb(217 4 41);
+  }
+
+  .text-crimson {
+    color: rgb(217 4 41);
+  }
+
+  .text-ocean {
+    color: rgb(0 119 182);
+  }
+
+  .hover\:bg-crimson:hover {
+    background-color: rgb(217 4 41);
+  }
+
+  .border-crimson\/30 {
+    border-color: rgba(217, 4, 41, 0.3);
+  }
+
+  .bg-crimson\/8 {
+    background-color: rgba(217, 4, 41, 0.08);
+  }
+
+  .bg-crimson\/10 {
+    background-color: rgba(217, 4, 41, 0.10);
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f8f8fa;
+}
+::-webkit-scrollbar-thumb {
+  background: #d90429;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b8031e;
+}
