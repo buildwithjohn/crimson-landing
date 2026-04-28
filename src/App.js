@@ -388,16 +388,21 @@ export default function CrimsonWingsWebsite() {
                 style={{ background: '#fff', borderRadius: 20, overflow: 'hidden', border: '1px solid rgba(0,0,0,0.05)', boxShadow: '0 4px 24px rgba(0,0,0,0.07)' }}
                 whileHover={{ y: -8, boxShadow: '0 24px 48px rgba(0,0,0,0.13)' }} transition={{ duration: 0.35 }}
               >
-                <div style={{ height: 96, background: 'linear-gradient(135deg,#06091a,#1e2a4a)', position: 'relative', overflow: 'hidden' }}>
-                  <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at top,rgba(217,4,41,0.35),transparent)' }} />
-                </div>
-                <div style={{ padding: '0 20px 24px', marginTop: -48 }}>
-                  <div style={{ position: 'relative', marginBottom: 16 }}>
-                    <img src={member.image} alt={member.name} style={{ width: 80, height: 80, borderRadius: '50%', objectFit: 'cover', border: '3px solid #fff', boxShadow: '0 4px 16px rgba(0,0,0,0.15)', display: 'block', margin: '0 auto' }} />
-                    <div style={{ position: 'absolute', bottom: -4, left: '50%', transform: 'translateX(-50%)', background: DS.crimson, color: '#fff', fontSize: 10, fontWeight: 700, padding: '2px 10px', borderRadius: 999, letterSpacing: '0.1em', whiteSpace: 'nowrap' }}>{member.title}</div>
+                {/* Square photo — full width, tall, no crop circle */}
+                <div style={{ position: 'relative', overflow: 'hidden', borderRadius: '16px 16px 0 0' }}>
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    style={{ width: '100%', height: 260, objectFit: 'cover', objectPosition: 'center top', display: 'block' }}
+                  />
+                  {/* Crimson title badge over photo — bottom-left */}
+                  <div style={{ position: 'absolute', bottom: 12, left: 12, background: DS.crimson, color: '#fff', fontSize: 11, fontWeight: 700, padding: '4px 14px', borderRadius: 6, letterSpacing: '0.08em' }}>
+                    {member.title}
                   </div>
-                  <h3 style={{ fontFamily: DS.fontDisplay, fontSize: 16, fontWeight: 700, textAlign: 'center', color: DS.slate900, marginBottom: 12, marginTop: 8 }}>{member.name}</h3>
-                  <p style={{ fontSize: 12, textAlign: 'center', color: DS.slate500, lineHeight: 1.7 }}>{member.bio}</p>
+                </div>
+                <div style={{ padding: '20px 20px 24px' }}>
+                  <h3 style={{ fontFamily: DS.fontDisplay, fontSize: 18, fontWeight: 700, textAlign: 'center', color: DS.slate900, marginBottom: 10 }}>{member.name}</h3>
+                  <p style={{ fontSize: 13, textAlign: 'center', color: DS.slate500, lineHeight: 1.75 }}>{member.bio}</p>
                 </div>
               </motion.div>
             ))}
